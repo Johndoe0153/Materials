@@ -1,0 +1,25 @@
+Git 컨닝 페이퍼
+
+로컬 저장소를 복제(clone) 하기: git clone /로컬/저장소/경로
+원격 서버의 저장소를 복제(clone)하기: git clone 사용자명@호스트: /원격/저장소/경로
+
+저장소에 올리기:
+
+    1. git add 파일명(전부는 --all)
+    2. git commit -m "설명"
+    3. git push origin master
+    
+    * 원격 저장소와 연결: git remote add origin <원격 서버 주소>
+    
+브랜치:
+
+    1. 브랜치 만들기: git checkout -b <브랜치 명>
+    2. master 브랜치로 돌아오기: git checkout master
+    3. 브랜치 삭제: git branch -d <브랜치 명>
+    4. 원격 저장소로 보내기: git push origin <브랜치 명>
+    
+갱신 병합:
+
+    로컬 저장소 갱신: git pull
+    다른 브랜치 내용을 현 브랜치로 병합: git merge <브랜치 명>
+    
