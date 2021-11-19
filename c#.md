@@ -18,7 +18,7 @@
 ### int: 정수
 ### decimal: 소수 포함
 : 숫자 뒤에 `m` 글자를 추가함. 대소문자 상관 없음  
->(e.g. ` Console.WriteLine(12.3m);`)
+>e.g. ` Console.WriteLine(12.3m);`
 
 ### bool: 참 & 거짓
 : boolean / 불린 값
@@ -33,7 +33,7 @@ C# 키워드는 사용 불가
 
 ### 변수 선언하기
 : `리터럴 값 변수명`
->(e.g. string firstName;)
+>e.g. string firstName;
 
 ### 변수 초기화
 : 선언 시점에서 변수에 값을 할당하여 변수를 초기화 함
@@ -74,22 +74,22 @@ C# 키워드는 사용 불가
 
 ### 소수(decimal) 사용 시
 : 제수(나누는 수) 또는 피제수(제수 아닌 거) 중 적어도 하나는 decimal 형식이어야 한다.  
->(e.g. `decimal decimalQuotient = 7 / 5.0m;` 또는`decimal decimalQuotient = 7.0m / 5.0m;`)  
+>e.g. `decimal decimalQuotient = 7 / 5.0m;` 또는`decimal decimalQuotient = 7.0m / 5.0m;`  
 즉, 소수를 계산할 때, 못해도 하나 이상은`m`을 숫자 뒤에 붙여야 한다.
 
 ### 정수(int)를 사용할 때, 소수 점 자리가 잘리지 않고 나오려면
 : int에서 decimal로 캐스트(일시적으로 값을 다른 데이터 형식인 것처럼 컴파일러에게 지시하는 데이터 변환 유형)하는 데이터 형식 캐스트를 수행한다.  
->(e.g. `int num1 = 10;` -> `int num2 = 4;` -> `Console.WriteLine((decimal)num1 / (decimal)num2); `)
+>e.g. `int num1 = 10;` -> `int num2 = 4;` -> `Console.WriteLine((decimal)num1 / (decimal)num2); `
 
 ### 나머지를 구하려면
 : `%`를 사용한다.
->(e.g. `Console.WriteLine("Modulus of 7 / 5: " + (7 % 5));` -> `Modulus of  7 / 5: 2`)
+>e.g. `Console.WriteLine("Modulus of 7 / 5: " + (7 % 5));` -> `Modulus of  7 / 5: 2`
 
 ### 증가 및 감소
 : `+=` 연산자는 연산자 오른쪽의 값을 더하고 연산자 왼쪽의 값에 할당함(`-=`, `/=`, `*= `도 동일한 원리로 작용).
->(e.g. `a = 1` -> `a += 3` -> `a = 4`)
+>e.g. `a = 1` -> `a += 3` -> `a = 4`
 : `++` 연산자는 변수 값을 1씩 증분함(`--` 연산자도 동일한 원리로 작용).
->(e.g. `a = 1` -> `a++` -> `a = 2`)
+>e.g. `a = 1` -> `a++` -> `a = 2`
 
 ### 위치 지정
 : `++a`는 값이 검색되기 전에 값을 증가, `a++`는 값을 검색하고 나서 값을 증가.
@@ -120,13 +120,61 @@ Console: 클래스 WriteLine(): 메세드
 ## if 문
 : `if`+ 괄호 `()` 사이의 부울 식 + 중괄호 `{}`로 정의되는 코드블록으로 구성
 
->(`e.g.
-if (total > 14)
+>e.g.
+`if (total > 14)
 {
     Console.WriteLine("You win!");
 }`
-)
 
 부울 식: `true` 또는 `false` 부울 값을 반환하는 코드. `>=`: 크거나 같음. `<=` 작거나 같음.
 
 >> `||`: OR `&&`: AND
+
+### else if
+:여러 조건들을 생성
+
+### else
+:선택 사항이지만, 마지막에 와야 함.
+
+## 배열
+:단일 변수 이름을 통해 액세스할 수 있는 개별 데이터 요소의 시퀀스
+
+### 배열 선언
+:`데이터 유형[] 변수명 = new 데이터 유형[배열에 포함되는 요소의 개수]`의 형식으로 선언함.
+>e.g. `string[] fraudulentOrderIDs = new string[3];`
+
+### 배열 요소에 값 할당
+: `변수명[요소 순서] = 배열 값` 요소 순서는 0으로 시작함을 잊지말 것.
+>e.g. `ids[0] = "a123";
+
+### 배열 초기화
+: 새 배열을 선언하면 초기화 됨.
+
+### 단일 코드 줄로 배열 선언
+:`데이터 유형[] 변수명 = {배열 값};`의 형식으로 선언함.
+
+### 배열 요소 개수 가져오기
+:`Lenth`속성으로 사용 가능. `변수명.Lenth`
+
+## foreach 문
+: 배열의 각 요소를 반복하여 해당 선언 아래에 있는 코드 블록을 실행하고, 임시 변수의 값을 현재 루프가 나타내는 배열의 값을 대체함.  
+`foreach (데이터 유형 임시 변수명 in 변수명)
+{
+    반복할 명령
+}` 의 형식을 취함.
+
+>e.g.
+`foreach (string name in people)
+{
+    Console.WriteLine(name);
+}`
+
+### ~ 시작함
+:`.StrartWith` 사용
+
+## 주석
+: 한 줄 -> `//` 여러 줄 -> `/* 어쩌고 저쩌고 */
+
+## 문자열 입력
+: `Console.Readline()` 사용
+>e.g. int age = Console.ReadLine();
