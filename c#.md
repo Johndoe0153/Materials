@@ -177,4 +177,4 @@ Console: 클래스 WriteLine(): 메세드
 
 ## 문자열 입력
 : `Console.Readline()` 사용
->e.g. int age = Console.ReadLine();
+>e.g. `int age = Console.ReadLine();`
