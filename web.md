@@ -185,3 +185,54 @@
 >`alert( !!"non-empty string" ); // true`
 
 ### ! > && > || 순서로 !가 먼저 실행됨.
+
+### while 문
+:반복문
+>`while (조건 (== condition)) {
+    코드(== 본문, body)
+}`
+
+### for 문
+:반복문. `begin`: 반목문 집입 시 한 번만 실행. `step` 각 반복의 `body`가 실행된 이후에 실행. "`codition`이 `truthy` -> `body` 실행 -> `step` 실행"이 반복.
+>`for (begin; condition; step) {
+    코드(== 본문, body)
+}`
+
+### break
+:반복문 빠져나오기
+>`if (!value) break;`
+
+### continue
+:전체 반복문을 멈추지 않고, 실행 중인 반복을 멈추고 다음 반복문으로 넘어감.
+>`if (i % 2 == 0) continue;`: 밑의 코드를 실행하지 않고, 다시 위의 코드를 실행함
+
+### break/continue와 레이블
+:여러 개의 중첩 반복문을 한 번에 빠져 나올 때. 레이블(반복문 앞에 콜론과 함께 쓰이는 식별자)
+>`if (input) break outer;`
+>>`outer: for (코드)`: 레이블
+
+### 함수 선언
+>`function showMessage(){
+    alert('Hello!);
+}`
+
+#### 지역 변수
+:함수 내에서 선언한 변수로써, 함수 안에서만 접근 가능.
+
+#### 외부 변수
+:함수 밖에서 선언한 변수로써, 함수 안에서 접근 가능. 단, 지역 변수가 없는 경우에만 사용 가능.
+
+### 매개 변수
+:임의의 데이터를 함수 안에 전달 가능.
+>`function showMessage(from, text) { // 인수: from, text
+  alert(from + ': ' + text);
+}`
+
+>`showMessage('Ann', 'Hello!'); // Ann: Hello! 
+showMessage('Ann', "What's up?"); // Ann: What's up?`
+
+### 반환 값
+:함수를 호츨했을 때 함수를 호출한 그곳에 특정 값을 반환하게 함.
+>`funtion sum(a, b) {
+    return a + b;
+}`
