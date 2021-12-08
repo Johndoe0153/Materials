@@ -236,3 +236,6 @@ showMessage('Ann', "What's up?"); // Ann: What's up?`
 >`funtion sum(a, b) {
     return a + b;
 }`
+
+### const
+:변수를 선언. 단 `let`은 변수에 재할당이 가능하지만, `const`는 변수 재선언, 재할당 모두 불가
